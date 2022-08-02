@@ -1,2 +1,3 @@
 # My GitIgnore File
+webp_images/*.webp
 *.zip

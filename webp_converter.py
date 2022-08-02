@@ -24,14 +24,14 @@ if st.button('Convert to WebP'):
      
      for file in reversed(uploaded_files):
           new_file_name = re.sub('\..*', '.webp', str(file.name))
-          new_file_path = new_file_name
+          new_file_path = 'webp_images/' + new_file_name
           image = Image.open(file)  # Open image
           image.save(fp= new_file_path, format='webp',
                     quality=quality_value)  # Convert image to webp
           new_file_size = round(Path(new_file_path).stat().st_size / 1000, 2)
           st.write(new_file_name, new_file_size, 'KB ✅')
           zipObj.write(new_file_path)
-          os.remove(new_file_path)
+          # os.remove(new_file_path)
 
      zipObj.close()
      
