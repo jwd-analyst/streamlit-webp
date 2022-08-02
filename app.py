@@ -5,7 +5,7 @@ from pathlib import Path
 from PIL import Image
 from zipfile import ZipFile
 import re
-import os
+# import os
 
 st.title('Image to WebP Converter')
 
