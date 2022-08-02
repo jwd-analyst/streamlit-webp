@@ -21,7 +21,8 @@ quality_value = st.slider('Choose Quality Score', 0, 100, 80)
 if st.button('Convert to WebP'):
     if len(uploaded_files) > 0:
      zipObj = ZipFile('images.zip', 'w')
-     
+     zipObj.write('webp_images/readme.txt')
+
      for file in reversed(uploaded_files):
           new_file_name = re.sub('\..*', '.webp', str(file.name))
           new_file_path = 'webp_images/' + new_file_name
