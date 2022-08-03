@@ -8,6 +8,7 @@ from PIL import Image
 from zipfile import ZipFile
 
 st.title('Image to WebP Converter')
+st.write('https://github.com/jwd-analyst/streamlit-webp')
 
 uploaded_files = st.file_uploader('Choose a Image File',
                                   accept_multiple_files=True)
