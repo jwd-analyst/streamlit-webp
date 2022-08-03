@@ -5,7 +5,6 @@ from pathlib import Path
 from PIL import Image
 from zipfile import ZipFile
 import re
-# import os
 
 st.title('Image to WebP Converter')
 
@@ -32,7 +31,7 @@ if st.button('Convert to WebP'):
           new_file_size = round(Path(new_file_path).stat().st_size / 1000, 2)
           st.write(new_file_name, new_file_size, 'KB ✅')
           zipObj.write(new_file_path)
-          # os.remove(new_file_path)
+          Path(new_file_path).unlink()
 
      zipObj.close()
      
