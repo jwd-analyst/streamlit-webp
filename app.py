@@ -11,6 +11,8 @@ st.title('Image to WebP Converter')
 st.write('https://github.com/jwd-analyst/streamlit-webp')
 
 uploaded_files = st.file_uploader('Choose a Image File',
+                                  type=['jpg', 'jpeg', 'jp2',
+                                        'png', 'tiff', 'bmp', 'webp'],
                                   accept_multiple_files=True)
 for uploaded_file in uploaded_files:
     bytes_data = uploaded_file.read()
